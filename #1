@@ -1,0 +1,30 @@
+
+/**Creamos la interfaz llamada Renzo y le asignamos dos propiedades por defecto.
+ * Estas propiedades son 
+ *  Reservado:string <- Que sera de tipo string
+ *  Hora:number <- Que sera de tipo number
+ *  */
+interface Renzo{
+    Reservado:string,
+    Hora:number
+}
+
+/*Creamos una variable de tipo objeto donde haremos uso de nuestra interfaz
+ una vez le pasemos el tipo de dato, que en este caso es el nombre de nuestra interfaz
+ se le cargaran todas las propiedades que este tiene.*/
+let Persona:Renzo={
+    Reservado:'No quiere decir nada',
+    Hora:10
+}
+
+/**Creamos una funcion que recibe un parametro y este parametro sera del mismo tipo,
+ * es decir de nuestra interfaz, y este permitira cargar las propiedades que tenemos asignadas.
+ *  */ 
+function HoraLlegada(Parametro:Renzo){
+    console.log(`Renzo ${Parametro.Reservado} y llego a las: ${Parametro.Hora} AM`);
+}
+
+/**Hacemos uso de nuestra variable de tipo objeto que creamos anteriormente para asignarsela
+ * como parametro a nuestra funcion.
+ */
+HoraLlegada(Persona);
